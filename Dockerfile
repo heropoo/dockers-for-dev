@@ -1,7 +1,6 @@
-#ROM php:7.0-alpine
-FROM geshan/laravel-alpine:php7
+ROM php:7.0-alpine
 
-#RUN docker-php-ext-install pdo pdo_mysql mysqli iconv mcrypt 
+RUN docker-php-ext-install pdo pdo_mysql mysqli
 
 #RUN pecl install gd \
 #	&& docker-php-ext-enable gd
