@@ -1,2 +1,4 @@
-# php-web-app
-php web app in docker
+# dockers for dev
+list:
+* php
+* mysql
