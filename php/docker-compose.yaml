@@ -1,6 +1,9 @@
-php7.0-cli-server:
-    image: heropoo/php-cli-alpine
-    volumes:
-        - $PWD/www:/srv/www
-    ports:
+version: '3'
+services:
+    web:
+      build: .
+      command: php -S 0.0.0.0:80 -t /srv/www
+      volumes:
+        - .:/srv/www
+      ports:
         - 8080:80
