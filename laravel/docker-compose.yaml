@@ -4,6 +4,6 @@ services:
       build: .
       command: php -S 0.0.0.0:80 -t /srv/www
       volumes:
-        - .:/srv/www
+        - ./www:/srv/www
       ports:
         - 8080:80
