@@ -1,0 +1,14 @@
+version: '2'
+services:
+    nginx:
+        image: nginx:alpine
+        command: nginx -g 'daemon off;'
+        volumes:
+            - ./conf/nginx/conf.d:/etc/nginx/conf.d
+            - ./logs/nginx:/var/log/nginx 
+            - ./www:/src/www
+        ports:
+            - 80:80
+    php-fpm:
+        image: php:7.0-fpm-alpine
+

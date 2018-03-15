@@ -1,0 +1,8 @@
+web:
+    image: nginx:alpine
+    command: redis-server --appendonly yes 
+    volumes:
+       # - ./redis.conf:/etc/redis.conf
+        - ./data:/data
+    ports:
+        - 6379:6379
