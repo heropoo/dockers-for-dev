@@ -11,4 +11,3 @@ services:
             - 80:80
     php-fpm:
         image: php:7.0-fpm-alpine
-
