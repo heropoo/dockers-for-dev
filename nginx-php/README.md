@@ -1,4 +1,4 @@
-# nginx
+# nginx-php
 
 ### usage
 run by docker 
