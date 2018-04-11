@@ -3,3 +3,4 @@ list:
 * [php](./php)
 * [mysql](./mysql)
 * [redis](./redis)
+* [nginx](./nginx)
