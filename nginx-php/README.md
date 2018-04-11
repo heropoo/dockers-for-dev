@@ -1,5 +1,4 @@
-# mysql-docker
-mysql-docker
+# nginx
 
 ### usage
 run by docker 
