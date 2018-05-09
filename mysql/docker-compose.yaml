@@ -2,7 +2,7 @@ db:
     image: mysql:5.7
     volumes:
         - ./conf/my.cnf:/etc/mysql/my.cnf
-        - ./logs:/var/log/mysql/
+#        - ./logs:/var/log/mysql/
         - ./data:/var/lib/mysql
     ports:
         - 3306:3306
