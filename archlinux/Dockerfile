@@ -6,11 +6,11 @@ RUN pacman -Syy && pacman -S --noconfirm openssh
 RUN rm -rf /var/cache/pacman
 
 ENV ROOT_PASSWORD 123456
-RUN echo "root:${ROOT_PASSWORD}" | chpasswd
+RUN echo 'root:123456' | chpasswd
 
 RUN useradd -m heropoo 
 ENV PASSWORD 123456
-RUN /bin/echo 'heropoo:123456' |chpasswd
+RUN echo 'heropoo:123456' |chpasswd
 
 RUN ssh-keygen -f /etc/ssh/ssh_host_rsa_key -N '' -t rsa &&\
     ssh-keygen -f /etc/ssh/ssh_host_dsa_key -N '' -t dsa &&\
