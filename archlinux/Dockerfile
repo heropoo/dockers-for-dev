@@ -2,15 +2,13 @@ FROM base/archlinux
 
 MAINTAINER Heropoo "aiyouyou1000@163.com"
 
-RUN pacman -Syy && pacman -S --noconfirm openssh
+RUN pacman -Syy && pacman -S --noconfirm openssh sudo
 RUN rm -rf /var/cache/pacman
-
-ENV ROOT_PASSWORD 123456
-RUN echo 'root:123456' | chpasswd
 
 RUN useradd -m heropoo 
 ENV PASSWORD 123456
 RUN echo 'heropoo:123456' |chpasswd
+RUN echo 'ALL=(ALL) ALL' >> /etc/sudoers
 
 RUN ssh-keygen -f /etc/ssh/ssh_host_rsa_key -N '' -t rsa &&\
     ssh-keygen -f /etc/ssh/ssh_host_dsa_key -N '' -t dsa &&\
