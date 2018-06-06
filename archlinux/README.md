@@ -2,8 +2,9 @@
 
 ArchLinux with sshd.
 
-support:
+## support:
 * ssh
+* sudo
 
 ## build 
 ```
