@@ -8,7 +8,7 @@ RUN rm -rf /var/cache/pacman
 RUN useradd -m heropoo 
 ENV PASSWORD 123456
 RUN echo 'heropoo:123456' |chpasswd
-RUN echo 'ALL=(ALL) ALL' >> /etc/sudoers
+RUN echo 'heropoo ALL=(ALL) ALL' >> /etc/sudoers
 
 RUN ssh-keygen -f /etc/ssh/ssh_host_rsa_key -N '' -t rsa &&\
     ssh-keygen -f /etc/ssh/ssh_host_dsa_key -N '' -t dsa &&\
