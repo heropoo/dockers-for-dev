@@ -6,4 +6,5 @@ list:
 * [redis](./redis)
 * [nginx](./nginx)
 * [nginx-php](./nginx-php)
+* [sshd](./sshd)
 * [git-server](./git-server)
