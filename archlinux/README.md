@@ -1,6 +1,6 @@
 # Archlinux
 
-ArchLinux with sshd.
+ArchLinux with ssh sudo.
 
 ## support:
 * ssh
