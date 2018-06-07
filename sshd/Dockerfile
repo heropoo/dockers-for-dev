@@ -7,15 +7,12 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositorie
 
 RUN apk update && apk add --no-cache openssh-server
 
-RUN sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config \
+RUN sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config
 
+ENV ROOT_PASSWORD 123456
 RUN echo "root:${ROOT_PASSWORD}" | chpasswd
 
-ENV PASSWORD 123456
-
 EXPOSE 22
-
-RUN echo "root:":$PASSWORD | chpasswd
 
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
