@@ -1,21 +1,16 @@
-# git-server
+# sshd
 
-A git server based on AlpineLinux.
+A sshd-server based on AlpineLinux.
 
 support:
 * ssh
 
 ## build 
 ```
-docker build -t heropoo/git-server .
+docker build -t heropoo/sshd .
 ```
 
 ## run 
 ```
-docker run --rm -d -ti -v ./git:/home/git -p 2222:22 heropoo/git-server
-```
-
-or run by `docker-compose` 
-```
-docker-compose up
+docker run --rm -d -p 2222:22 heropoo/sshd
 ```
