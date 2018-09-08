@@ -13,5 +13,5 @@ docker build -t heropoo/git-server .
 
 ## run 
 ```
-docker run --rm -d -v ./git:/home/git -p 2222:22 heropoo/git-server
+docker run --rm -d -v $PWD/git:/home/git -p 2222:22 heropoo/git-server
 ```
