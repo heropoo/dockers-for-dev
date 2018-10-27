@@ -11,4 +11,6 @@ RUN apk update && apk add freetype-dev libjpeg-turbo-dev libmcrypt-dev libpng-de
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
+WORKDIR /srv/www
+
 CMD [ "php", "-a"]
