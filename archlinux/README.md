@@ -5,7 +5,6 @@ ArchLinux with ssh sudo.
 ## support:
 * ssh
 * sudo
-* vim
 
 ## build 
 ```

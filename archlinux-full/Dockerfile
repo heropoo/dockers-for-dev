@@ -2,7 +2,7 @@ FROM base/archlinux
 
 MAINTAINER Heropoo "aiyouyou1000@163.com"
 
-RUN pacman -Syy && pacman -S --noconfirm openssh sudo
+RUN pacman -Syy && pacman -S --noconfirm base-devel openssh sudo vim iproute2 net-tools
 RUN rm -rf /var/cache/pacman
 
 RUN useradd -m heropoo 
