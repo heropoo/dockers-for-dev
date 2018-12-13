@@ -5,7 +5,7 @@ MAINTAINER	Heropoo "aiyouyou1000@163.com"
 #set a faster repositorie
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 
-RUN apk update && apk add --no-cache openssh-server gcc libc-dev make autoconf
+RUN apk update && apk add --no-cache openssh gcc libc-dev make autoconf
 
 RUN sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config
 
