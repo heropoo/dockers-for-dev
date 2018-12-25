@@ -23,10 +23,5 @@ docker build -t heropoo/php-cli-alpine .
 
 ## run 
 ```
-docker run --rm -ti -v $PWD/www/:/src/www -p 8080:80 heropoo/php-cli-alpine
-```
-
-or run by `docker-compose` 
-```
-docker-compose up
+docker run --rm -ti -v $PWD/www/:/srv/www -p 8080:80 heropoo/php-cli-alpine /bin/sh
 ```

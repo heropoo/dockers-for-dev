@@ -14,6 +14,3 @@ COPY --from=composer /usr/bin/composer /usr/bin/composer
 #RUN mkdir /srv/www
 WORKDIR /srv/www
 EXPOSE 80
-ENV NAME php7.0-cli-server
-
-CMD [ "php", "-S", "0.0.0.0:80", "-t", "/srv/www"]

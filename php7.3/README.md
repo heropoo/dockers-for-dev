@@ -22,5 +22,5 @@ docker build -t heropoo/php7.3-cli-alpine .
 
 ## run 
 ```
-docker run --rm -ti -v $PWD/www/:/src/www heropoo/php7.3-cli-alpine
+docker run --rm -ti -v $PWD/www/:/srv/www heropoo/php7.3-cli-alpine /bin/sh
 ```
