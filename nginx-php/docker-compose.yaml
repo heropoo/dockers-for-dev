@@ -7,7 +7,7 @@ services:
             - ./conf/nginx/nginx.conf:/etc/nginx/nginx.conf
             - ./conf/nginx/conf.d:/etc/nginx/conf.d
             - ./www:/srv/www
-            #- ./logs/nginx:/var/log/nginx
+            - ./logs/nginx:/var/log/nginx
         ports:
             - 8080:80
     php-fpm:
