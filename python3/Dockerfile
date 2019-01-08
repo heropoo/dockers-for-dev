@@ -14,6 +14,4 @@ RUN pip install -r /usr/src/python3/requirements.txt -i https://pypi.douban.com/
 
 WORKDIR /root/projects
 
-EXPOSE 8000
-
-CMD ["/bin/sh"]
+EXPOSE 8888
