@@ -9,5 +9,5 @@ docker build -t heropoo/nginx-rtmp .
 ## usage
 run 
 ```
-docker run --rm -p 8080:80 heropoo/nginx-rtmp
+docker run -p 8888:80 -p 1935:1935 -v $PWD/nginx.conf:/etc/nginx/nginx.conf  heropoo/nginx-rtmp
 ```
