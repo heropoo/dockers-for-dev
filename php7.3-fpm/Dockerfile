@@ -18,6 +18,6 @@ RUN cd /root && tar -zxvf mongodb-1.5.3.tgz && cd mongodb-1.5.3 && phpize && ./c
 COPY ./src/swoole-src-4.2.10.tar.gz /root/ 
 RUN cd /root && tar -zxvf swoole-src-4.2.10.tar.gz && cd swoole-src-4.2.10 && phpize && ./configure && make -j$(getconf _NPROCESSORS_ONLN) && make install && docker-php-ext-enable swoole
 
-COPY --from=composer /usr/bin/composer /usr/bin/composer
+COPY --from=heropoo/php7.0-composer /usr/bin/composer /usr/bin/composer
 
 WORKDIR /srv/www
