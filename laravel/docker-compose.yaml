@@ -1,9 +1,0 @@
-version: '2'
-services:
-    web:
-      build: .
-      command: php -S 0.0.0.0:80 -t /srv/www
-      volumes:
-        - ./www:/srv/www
-      ports:
-        - 8080:80
