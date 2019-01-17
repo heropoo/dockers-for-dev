@@ -27,5 +27,5 @@ docker build -t heropoo/php7.3-fpm-alpine .
 
 ## run 
 ```
-docker run -d -v $PWD/www/:/srv/www heropoo/php7.3-fpm-alpine
+docker run -d  -v $PWD/php-fpm.conf:/usr/local/etc/php-fpm.d/www.conf -v /var/www/:/var/www heropoo/php7.3-fpm-alpine
 ```
