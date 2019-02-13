@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3.9
 
 MAINTAINER	Heropoo "aiyouyou1000@163.com"
 
