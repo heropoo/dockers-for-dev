@@ -12,8 +12,6 @@ RUN sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config
 ENV ROOT_PASSWORD 123456
 RUN echo "root:${ROOT_PASSWORD}" | chpasswd
 
-RUN adduser -s /usr/bin/git-shell -D git
-
 EXPOSE 22
 ENV NAME gcc-alpine
 
