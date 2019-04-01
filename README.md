@@ -3,7 +3,7 @@ list:
 * [archlinux](./archlinux)
 * [php](./php)
 * [mysql5.7](./mysql5.7)
-* [mysql5.8](./mysql5.8)
+* [mysql8](./mysql8)
 * [redis](./redis)
 * [nginx](./nginx)
 * [nginx-php](./nginx-php)
