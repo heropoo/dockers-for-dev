@@ -1,8 +1,8 @@
 redis:
     image: redis:alpine
-    command: redis-server --appendonly yes 
+    command: redis-server /etc/redis.conf --appendonly yes
     volumes:
-       # - ./redis.conf:/etc/redis.conf
+        - ./redis.conf:/etc/redis.conf
         - ./data:/data
     ports:
         - 6379:6379

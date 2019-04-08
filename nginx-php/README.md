@@ -14,7 +14,7 @@ with some php-extension:
  
 ## build
 ```
-docker build -t heropoo/php7.0-fpm-alpine .
+docker build -t heropoo/php-fpm-alpine .
 ```
  
 ## usage
@@ -23,3 +23,7 @@ run by docker-compose
 docker-compose up
 ```
 
+## change php version and build
+```
+./change-php-version.sh
+``` 
