@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+    nginx:
+        image: heropoo/nginx-rtmp
+        #command: nginx -g 'daemon off;'
+        #restart: always
+        volumes:
+            - ./nginx.conf:/etc/nginx/nginx.conf
+
+        ports:
+            - 8888:80
+            - 1935:1935
