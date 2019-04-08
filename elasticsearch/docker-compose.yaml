@@ -1,6 +1,6 @@
 elasticsearch:
     image: elasticsearch:5.6-alpine
-    command: redis-server --appendonly yes 
+    restart: always 
     #volumes:
     #    - ./data:/data
     ports:
