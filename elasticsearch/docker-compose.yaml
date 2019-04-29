@@ -1,6 +1,6 @@
 elasticsearch:
     #image: elasticsearch:5.6.16-alpine
-    image: heropoo/elasticsearch-ik 
+    image: heropoo/elasticsearch 
     restart: always 
     #volumes:
     #    - ./data:/data
