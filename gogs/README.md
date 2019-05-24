@@ -4,7 +4,7 @@ gogs
 ### usage
 run by docker 
 ```
-docker run --name=gogs -p 10022:22 -p 10080:3000 -v /var/gogs:/data -d gogs/gogs
+docker run --name=gogs -p 10022:22 -p 10080:3000 -v $PWD/data:/data -d gogs/gogs
 ```
 
 run by docker-compose 
