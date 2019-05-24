@@ -1,0 +1,9 @@
+gogs:
+    image: gogs/gogs
+    volumes:
+        - ./data:/data
+    ports:
+        - 10022:22
+        - 10080:3000
+    restart: always
+
