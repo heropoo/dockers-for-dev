@@ -1,4 +1,4 @@
-FROM php:7.0-fpm-alpine
+FROM php:7.1-fpm-alpine
 
 MAINTAINER	Heropoo "aiyouyou1000@163.com"
 
@@ -11,12 +11,12 @@ RUN apk update && apk add build-base autoconf openssl openssl-dev \
 	&& docker-php-ext-install -j$(getconf _NPROCESSORS_ONLN) gd iconv pdo pdo_mysql mysqli pcntl sockets
 
 #mongodb
-COPY mongodb-1.5.3.tgz /root/ 
-RUN cd /root && tar -zxvf mongodb-1.5.3.tgz && cd mongodb-1.5.3 && phpize && ./configure && make -j$(getconf _NPROCESSORS_ONLN) && make install && docker-php-ext-enable mongodb
+COPY mongodb-1.5.5.tgz /root/ 
+RUN cd /root && tar -zxvf mongodb-1.5.5.tgz && cd mongodb-1.5.5 && phpize && ./configure && make -j$(getconf _NPROCESSORS_ONLN) && make install && docker-php-ext-enable mongodb
 
 #swoole
-COPY swoole-src-4.2.10.tar.gz /root/ 
-RUN cd /root && tar -zxvf swoole-src-4.2.10.tar.gz && cd swoole-src-4.2.10 && phpize && ./configure && make -j$(getconf _NPROCESSORS_ONLN) && make install && docker-php-ext-enable swoole
+COPY swoole-4.4.3.tgz /root/ 
+RUN cd /root && tar -zxvf swoole-4.4.3.tgz  && cd swoole-4.4.3 && phpize && ./configure && make -j$(getconf _NPROCESSORS_ONLN) && make install && docker-php-ext-enable swoole
 
 WORKDIR /srv/www
 

@@ -23,10 +23,12 @@ read -p "Comfirm to build $php_version y/n? " confirm
 #sed '1d' -i Dockerfile
 sed "1c FROM php:$php_version-fpm-alpine" -i Dockerfile
 
-docker build -t heropoo/php-fpm-alpine .
+image_name="heropoo/php-${php_version}-fpm-alpine"
+
+docker build -t $image_name .
 
 echo "Now your PHP version is ";
-docker run -ti --name=tmp-php heropoo/php-fpm-alpine php -v
+docker run -ti --name=tmp-php $image_name php -v
 
 tmp_container_id=`docker ps -a|grep tmp-php|awk '{print $1}'`
 
