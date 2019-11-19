@@ -12,7 +12,7 @@ services:
         ports:
             - 80:80
     php-fpm:
-        image: heropoo/php-fpm-alpine
+        image: heropoo/php-7.3-fpm-alpine
         restart: always
         volumes:
             - ./conf/php/php-fpm.conf:/usr/local/etc/php-fpm.d/www.conf

@@ -14,7 +14,7 @@ with some php-extension:
  
 ## build
 ```
-docker build -t heropoo/php-fpm-alpine .
+docker build -t heropoo/php-7.3-fpm-alpine .
 ```
  
 ## usage
