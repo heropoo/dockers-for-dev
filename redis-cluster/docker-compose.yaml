@@ -1,0 +1,55 @@
+version: '3.1'
+services:
+    redis00:
+        image: redis:5.0-alpine
+        command: redis-server /etc/redis.conf 
+        volumes:
+            - ./redis00/redis.conf:/etc/redis.conf
+            - ./redis00/data:/data
+        ports:
+            - 7000:6379
+
+    redis01:
+        image: redis:5.0-alpine
+        command: redis-server /etc/redis.conf 
+        volumes:
+            - ./redis01/redis.conf:/etc/redis.conf
+            - ./redis01/data:/data
+        ports:
+            - 7001:6379
+
+    redis10:
+        image: redis:5.0-alpine
+        command: redis-server /etc/redis.conf
+        volumes:
+            - ./redis10/redis.conf:/etc/redis.conf
+            - ./redis10/data:/data
+        ports:
+            - 7010:6379
+    
+    redis11:
+        image: redis:5.0-alpine
+        command: redis-server /etc/redis.conf
+        volumes:
+            - ./redis11/redis.conf:/etc/redis.conf
+            - ./redis11/data:/data
+        ports:
+            - 7011:6379
+
+    redis20:
+        image: redis:5.0-alpine
+        command: redis-server /etc/redis.conf 
+        volumes:
+            - ./redis20/redis.conf:/etc/redis.conf
+            - ./redis20/data:/data
+        ports:
+            - 7020:6379
+    
+    redis21:
+        image: redis:5.0-alpine
+        command: redis-server /etc/redis.conf
+        volumes:
+            - ./redis21/redis.conf:/etc/redis.conf
+            - ./redis21/data:/data
+        ports:
+            - 7021:6379
