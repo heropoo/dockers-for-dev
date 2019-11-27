@@ -5,7 +5,6 @@ services:
         restart: always
         volumes:
             - ./conf/slb.conf:/etc/nginx/nginx.conf
-            - ./www:/srv/www
         ports:
             - 8080:80
     
