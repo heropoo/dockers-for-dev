@@ -1,0 +1,24 @@
+version: '3.1'
+services:
+    slb:
+        image: nginx:alpine
+        restart: always
+        volumes:
+            - ./conf/slb.conf:/etc/nginx/nginx.conf
+            - ./www:/srv/www
+        ports:
+            - 8080:80
+    
+    web1:
+        image: nginx:alpine
+        restart: always
+        volumes:
+            - ./conf/web1.conf:/etc/nginx/nginx.conf
+            - ./web1:/srv/www
+
+    web2:
+        image: nginx:alpine
+        restart: always
+        volumes:
+            - ./conf/web2.conf:/etc/nginx/nginx.conf
+            - ./web2:/srv/www
