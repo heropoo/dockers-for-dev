@@ -1,0 +1,5 @@
+memcached:
+    image: memcached:alpine
+    command: memcached -m 64
+    ports:
+        - 11211:11211
