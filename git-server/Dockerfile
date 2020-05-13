@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.11
 
 MAINTAINER	Heropoo "aiyouyou1000@163.com"
 
@@ -13,6 +13,9 @@ ENV ROOT_PASSWORD 123456
 RUN echo "root:${ROOT_PASSWORD}" | chpasswd
 
 RUN adduser -s /usr/bin/git-shell -D git
+
+ENV GIT_PASSWORD 123456
+RUN echo "git:${GIT_PASSWORD}" | chpasswd
 
 WORKDIR /home/git
 

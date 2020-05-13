@@ -3,9 +3,12 @@
 # generate host keys if not present
 ssh-keygen -A
 
-# check wether a random root-password is provided
 if [ ! -z ${ROOT_PASSWORD} ] && [ "${ROOT_PASSWORD}" != "123456" ]; then
     echo "root:${ROOT_PASSWORD}" | chpasswd
+fi
+
+if [ ! -z ${GIT_PASSWORD} ] && [ "${GIT_PASSWORD}" != "123456" ]; then
+    echo "git:${GIT_PASSWORD}" | chpasswd
 fi
 
 chown -R git:git /home/git 
