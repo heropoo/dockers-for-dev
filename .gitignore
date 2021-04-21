@@ -3,3 +3,4 @@
 *.local.yaml
 *.using
 .DS_Store
+*~
