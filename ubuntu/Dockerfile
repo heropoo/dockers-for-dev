@@ -1,6 +1,12 @@
-FROM ubuntu:18.04
+# FROM ubuntu:14.04  trusty
+# FROM ubuntu:16.04  xenial
+# FROM ubuntu:18.04  bionic
+# FROM ubuntu:20.04  focal
+FROM ubuntu:focal 
 
-MAINTAINER	Heropoo "aiyouyou1000@163.com"
+# MAINTAINER	Heropoo "aiyouyou1000@163.com"
+LABEL org.opencontainers.image.authors="aiyouyou1000@163.com"
+
 
 #set a faster repositorie
 RUN sed -i 's/security.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list \
