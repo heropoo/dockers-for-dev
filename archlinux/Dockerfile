@@ -1,4 +1,4 @@
-FROM archlinux/base
+FROM archlinux
 
 MAINTAINER Heropoo "aiyouyou1000@163.com"
 
