@@ -2,15 +2,17 @@
 # FROM ubuntu:16.04  xenial
 # FROM ubuntu:18.04  bionic
 # FROM ubuntu:20.04  focal
-FROM ubuntu:focal 
+# FROM ubuntu:22.04  jammy 
+# FROM ubuntu:24.04  noble  last
+FROM ubuntu:24.04
 
 # MAINTAINER	Heropoo "aiyouyou1000@163.com"
 LABEL org.opencontainers.image.authors="aiyouyou1000@163.com"
 
 
-#set a faster repositorie
-RUN sed -i 's/security.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list \
-    && sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
+# set a faster repositorie
+# RUN sed -i 's/security.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list \
+#    && sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
 
 RUN apt-get update && apt-get install -y openssh-server
 
