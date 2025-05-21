@@ -18,6 +18,8 @@ RUN echo 'heropoo ALL=(ALL) ALL' >> /etc/sudoers
 #    ssh-keygen -f /etc/ssh/ssh_host_ed25519_key -N '' -t ed25519
 #RUN sed -i "s/UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config && sed -i "s/UsePAM.*/UsePAM no/g" /etc/ssh/sshd_config && sed -i "s/#PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config && sed -i "s/#AuthorizedKeysFile/AuthorizedKeysFile/g" /etc/ssh/sshd_config
 
+RUN ssh-keygen -A
+
 EXPOSE 22
 
 COPY entrypoint.sh /usr/bin/
